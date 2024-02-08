@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app_header {
+  height: max(40vh, 200px);
+  border-radius: 0 0 100% 100%;
+  background-color: #f3f3f7;
+  box-shadow: 0px 20vh 20vh #f3f3f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.app_header h1 {
+  font-size: 2.5rem;
+  color: #7c818d;
+}
+.app_main {
+  margin-top: 10vh;
+  padding: 0 5vw;
+}
