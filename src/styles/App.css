@@ -4,21 +4,294 @@
   padding: 0;
 }
 
+/* -- Header --*/
 .app_header {
   height: max(40vh, 200px);
   border-radius: 0 0 100% 100%;
   background-color: #f3f3f7;
-  box-shadow: 0px 20vh 20vh #f3f3f7;
+  box-shadow: 0px 0vh 20vh 20vh #f3f3f7;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: -1;
 }
 .app_header h1 {
   font-size: 2.5rem;
   color: #7c818d;
 }
+
+/*-- Main Content --*/
 .app_main {
   margin-top: 10vh;
-  padding: 0 5vw;
+  padding: 0 2.5vw;
+}
+
+/*- User Container -*/
+.user_con {
+  z-index: 1;
+  background-color: #fff;
+  border-radius: 1vw;
+  box-shadow: 0px 0vh 1vw 1vw #f2f2f2;
+}
+.con_top_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vw;
+  border-bottom: 1px dashed #a0a3ac;
+  color: #7c818d;
+}
+.con_top_info form {
+  display: flex;
+  align-items: center;
+}
+.add_btn,
+.con_top_info input {
+  font-size: 1rem;
+}
+.add_btn {
+  cursor: pointer;
+  background-color: #7373f2;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  padding: 5px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border: 2px solid #7373f2;
+}
+.add_btn svg {
+  font-size: 1.3em;
+  margin-left: 5px;
+}
+.add_btn:hover {
+  background-color: #fff;
+  color: #7373f2;
+  transition: 0.2s;
+}
+.con_top_info input {
+  border: 1px solid #7c818d;
+  border-radius: 20px;
+  padding: 5px 20px;
+  width: 100%;
+}
+
+/*- User List -*/
+.user_con_main {
+  display: flex;
+}
+.user_list {
+  padding: 2vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.user_name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: max(300px, 20%);
+  padding: 20px;
+  border: 1px solid #efefef;
+  margin: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  white-space: nowrap;
+  cursor: pointer;
+  border-radius: 10px;
+  position: relative;
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 4px 10px;
+}
+.user_name::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #d0d0fb;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.user_name:hover {
+  background-color: #a2a2f6;
+  color: #fff;
+  transition: 0.2s;
+}
+.user_name:hover button {
+  color: #fff;
+}
+.user_name button {
+  background-color: transparent;
+  border: 0;
+  color: gray;
+}
+.user_name button:hover {
+  transition: 0.1s;
+  color: #f27373;
+}
+.active-user {
+  background-color: #a2a2f6;
+  color: #fff;
+}
+.active-user button {
+  color: #fff;
+}
+/*- User Info -*/
+.user_info_con {
+  background-color: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user_info {
+  width: max(500px, 50%);
+  max-width: max(500px, 50%);
+  height: 90vh;
+  overflow-y: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 2px dashed gray;
+}
+.user_info_name {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  background-color: #f3f3f7;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+}
+.user_info h2 {
+  display: flex;
+  align-items: center;
+}
+.user_info h2 svg {
+  margin-left: 5px;
+}
+.user_info_name button {
+  border: 0;
+}
+
+.user_info h2 button:hover {
+  transition: 0.1s;
+  color: #f27373;
+}
+.user_info table {
+  width: 90%;
+  margin: auto;
+  border-collapse: collapse;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+}
+.user_info table th {
+  background-color: #fff;
+  padding: 5px;
+  color: gray;
+  font-weight: lighter;
+}
+.user_info table td {
+  padding: 10px;
+  width: 30%;
+}
+.user_info table td a {
+  display: flex;
+  align-items: center;
+  color: #3333ff;
+  text-decoration: none;
+}
+.user_info table td a svg {
+  font-size: 1.2em;
+  margin-left: 5px;
+}
+.user_info table tr:nth-child(odd) {
+  background-color: #f3f3f7;
+}
+.user_info table tr:nth-child(even) {
+  background-color: rgba(115, 115, 242, 0.2);
+}
+.user_info::-webkit-scrollbar {
+  width: 10px;
+}
+.user_info::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+.user_info::-webkit-scrollbar-thumb {
+  background: lightgray;
+  border-radius: 10px;
+}
+.user_info::-webkit-scrollbar-thumb:hover {
+  background: gray;
+}
+
+/*- add user form -*/
+.add_user_form {
+}
+.add_user_form form {
+  background-color: #f3f3f7;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+}
+.add_user_form label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  margin: 20px;
+}
+.add_user_form label input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #7c818d;
+}
+.add_user_form form button {
+  display: inline-flex;
+}
+/*-- footer --*/
+footer {
+  color: #a0a3ac;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* --  Responsive --*/
+@media screen and (max-width: 700px) {
+  .con_top_info form {
+    margin: 10px 0;
+  }
+
+  .con_top_info button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  .con_top_info button span {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .con_top_info {
+    flex-direction: column;
+  }
 }

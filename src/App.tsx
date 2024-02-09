@@ -11,6 +11,10 @@ function App() {
       <main className="app_main">
         <UserContainer />
       </main>
+
+      <footer>
+        Made With Love By <i>"Khaled Nassar"</i>
+      </footer>
     </div>
   );
 }
