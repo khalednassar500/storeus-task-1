@@ -9,7 +9,7 @@
   height: max(40vh, 200px);
   border-radius: 0 0 100% 100%;
   background-color: #f3f3f7;
-  box-shadow: 0px 0vh 20vh 20vh #f3f3f7;
+  box-shadow: 0px 0vh 10vh 10vh #f3f3f7;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,7 +54,7 @@
 }
 .add_btn {
   cursor: pointer;
-  background-color: #7373f2;
+  background-color: #468af0;
   color: #fff;
   border: 0;
   outline: 0;
@@ -65,7 +65,7 @@
   justify-content: center;
   align-items: center;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  border: 2px solid #7373f2;
+  border: 2px solid #468af0;
 }
 .add_btn svg {
   font-size: 1.3em;
@@ -73,11 +73,11 @@
 }
 .add_btn:hover {
   background-color: #fff;
-  color: #7373f2;
+  color: #468af0;
   transition: 0.2s;
 }
 .con_top_info input {
-  border: 1px solid #7c818d;
+  border: 1px solid lightgray;
   border-radius: 20px;
   padding: 5px 20px;
   width: 100%;
@@ -86,6 +86,10 @@
 /*- User List -*/
 .user_con_main {
   display: flex;
+  justify-content: center;
+}
+.no_results {
+  padding: 20px;
 }
 .user_list {
   padding: 2vw;
@@ -115,7 +119,7 @@
   content: "";
   width: 10px;
   height: 10px;
-  background-color: #d0d0fb;
+  background-color: #a1eff7;
   position: absolute;
   top: 50%;
   left: 0;
@@ -123,7 +127,7 @@
   border-radius: 50%;
 }
 .user_name:hover {
-  background-color: #a2a2f6;
+  background-color: #46dff0;
   color: #fff;
   transition: 0.2s;
 }
@@ -139,6 +143,9 @@
   transition: 0.1s;
   color: #f27373;
 }
+.active_heart {
+  color: #f27373;
+}
 .active-user {
   background-color: #a2a2f6;
   color: #fff;
@@ -146,6 +153,7 @@
 .active-user button {
   color: #fff;
 }
+
 /*- User Info -*/
 .user_info_con {
   background-color: rgba(255, 255, 255, 0.8);
@@ -187,7 +195,6 @@
 .user_info_name button {
   border: 0;
 }
-
 .user_info h2 button:hover {
   transition: 0.1s;
   color: #f27373;
@@ -241,8 +248,6 @@
 }
 
 /*- add user form -*/
-.add_user_form {
-}
 .add_user_form form {
   background-color: #f3f3f7;
   width: 90%;
@@ -261,15 +266,21 @@
   width: 70%;
   padding: 10px;
   border: 1px solid #7c818d;
+  border-radius: 5px;
 }
 .add_user_form form button {
   display: inline-flex;
 }
+
 /*-- footer --*/
 footer {
   color: #a0a3ac;
   text-align: center;
   margin: 20px 0;
+}
+.loading {
+  text-align: center;
+  min-height: 50vh;
 }
 
 /* --  Responsive --*/
@@ -277,21 +288,40 @@ footer {
   .con_top_info form {
     margin: 10px 0;
   }
-
   .con_top_info button {
     position: fixed;
-    bottom: 10px;
+    bottom: 20px;
     right: 10px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    z-index: 2;
   }
   .con_top_info button span {
     display: none;
+  }
+  .app_header {
+    height: max(20vh, 100px);
+  }
+  .app_header h1 {
+    font-size: 2rem;
   }
 }
 @media screen and (max-width: 500px) {
   .con_top_info {
     flex-direction: column;
+  }
+  .user_name {
+    width: 80%;
+    min-width: 80%;
+  }
+  .add_user_form label {
+    flex-direction: column;
+  }
+  .add_user_form label input {
+    width: 100%;
+  }
+  .app_header h1 {
+    font-size: 1.5rem;
   }
 }
