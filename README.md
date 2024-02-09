@@ -2,6 +2,8 @@
 
 [Live Demo](https://storeus-task-1.vercel.app/)
 
+![Tool Logo](src/Screenshot.png)
+
 This project is a React application that interacts with the JSONPlaceholder API to manage a list of users. Users can view user details, mark favorites, and add new users through a form. It's designed to demonstrate React component integration with external APIs and state management for user interaction.
 
 ## Table of Contents
