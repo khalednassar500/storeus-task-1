@@ -1,46 +1,84 @@
-# Getting Started with Create React App
+# StoreUs Task 1
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Live Demo](https://storeus-task-1.vercel.app/)
 
-## Available Scripts
+A brief description of what your project does and its purpose.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Features
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Display User List
 
-### `npm test`
+- Create a React component called UserList.
+- Fetch a list of users from the JSONPlaceholder API (https://jsonplaceholder.typicode.com/users).
+- Display the names of users in a list format.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Show User Details
 
-### `npm run build`
+- Each user in the list is clickable.
+- When a user is clicked, show detailed information about that user.
+- Display the user's information in a modal or a separate section.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Mark/Unmark User as Favorite
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Add the ability to mark/unmark a user as a favorite.
+- Store this information in the component's state.
+- Update the UI to reflect the favorite status of users.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Add User Form
 
-### `npm run eject`
+- Create a form component called AddUserForm.
+- Include fields for the user's name, email, and phone number.
+- Allow users to submit the form to add a new user.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+5. Handle Form Submission
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Upon submitting the form, make a POST request to the JSONPlaceholder API to add the new user.
+- Update the list of users to reflect the changes without a page refresh.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Installation
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Clone the repository:
 
-## Learn More
+   ```bash
+   git clone https://github.com/khalednassar500/storeus-task-1.git
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Navigate to the project directory:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   cd storeus-task-1
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+## Usage
+
+1. Start the development server:
+
+   ```bash
+   npm start
+   ```
+
+2. Open your browser and navigate to `http://localhost:3000` to view the app.
+
+## Technologies Used
+
+List the technologies and libraries/frameworks used in your project.
+
+- React
+- Redux Toolkit
+- React-Redux
+- Material-ui
+- HTML/CSS
+- Typescript
